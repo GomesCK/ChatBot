@@ -1,0 +1,37 @@
+version: "3.1"
+
+intents:
+  - saudacao
+  - pedido_comida
+  - descricao_item
+  - status
+  - id_pedido
+  - agradecimento
+  # - Xingar
+
+responses:
+  utter_saudacao:
+  - text: "Olá e seja bem vindo! Como posso te ajudá-lo??"
+
+  utter_pedido_comida:
+  - text: "Certo, o que você gostaria de pedir hoje"
+
+  utter_descricao_item:
+  - text: "Feito, seu pedido é uma ordem mestre"
+    # image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_status:
+  - text: "Pedido pronto!!"
+
+  utter_id_pedido:
+  - text: "Número do pedido: 69"
+
+  utter_agradecimento:
+  - text: "Valeu falou"
+
+  # utter_Xingar:
+  # - text: "Vá tomar no cu"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

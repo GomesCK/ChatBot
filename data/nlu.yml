@@ -1,0 +1,82 @@
+version: "3.1"
+
+nlu:
+- intent: saudacao
+  examples: |
+    - hey
+    - Olá
+    - Bom dia
+    - Oi
+    - Boa tarde
+    - Boa noite
+    - Fala meu chapa
+    - Fala meu chapa
+    - Aoba
+    - Hello dear!!
+    - Salve
+    - Eae
+    - good morning
+
+- intent: pedido_comida
+  examples: |
+    - me dá o cu
+    - Quero encomendar uma pizza
+    - Você pode anotar o meu pedido
+    - Desejo fazer um pedido
+    - Quero pedir uma pizza
+    - Quero come
+    - Anote meu pedido
+    - Tô com fome
+    - Quero comer uma pizza
+    - Quais sabores você tem
+
+- intent: descricao_item
+  examples: |
+    - Quero uma pizza de calabresa 
+    - Uma pizza de frango com catupiry
+    - Meia calabresa e metade mussarela
+    - Gostaria de pedir uma pizza de Bacon
+    - Quero uma pizza de mussarela
+
+- intent: status
+  examples: |
+    - Qual o status do meu pedido??
+    - Onde está minha pizza??
+    - Meu pedido ainda não chegou
+    - Quanto tempo até minha pizza chegar??
+    - Cadê a pizza meu nobre??
+    - Estou com fome
+    - Cadê minha comida??
+
+- intent: id_pedido
+  examples: |
+    - O número do meu pedido é o 58693
+    - Meu pedido é o 586
+    - O pedido é o 58697
+    - O número é 5693
+    - Nº 58693
+    - 58693
+    - O pedido é 58693
+    - 58693
+    - Seu pedido é o 58693
+  
+
+- intent: agradecimento
+  examples: |
+    - Obrigado
+    - Valeu
+    - TKS
+    - TMJ
+    - Tamo junto
+    - Agradeço
+    - Muito obrigado
+    - vlw
+    - Você é fera
+    - Agradeço pelo atendimento
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
