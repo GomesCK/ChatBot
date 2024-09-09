@@ -1,82 +1,122 @@
 version: "3.1"
-
 nlu:
 - intent: saudacao
   examples: |
     - hey
-    - Olá
-    - Bom dia
-    - Oi
-    - Boa tarde
-    - Boa noite
-    - Fala meu chapa
-    - Fala meu chapa
-    - Aoba
-    - Hello dear!!
-    - Salve
-    - Eae
-    - good morning
-
+    - olá
+    - oi
+    - bom dia
+    - boa tarde
+    - boa noite
+    - fala meu chapa
+    - opa, tudo bem?
+    - salve
+    - eae
 - intent: pedido_comida
   examples: |
-    - me dá o cu
+    - Gostaria de pedir uma pizza
     - Quero encomendar uma pizza
     - Você pode anotar o meu pedido
     - Desejo fazer um pedido
     - Quero pedir uma pizza
-    - Quero come
-    - Anote meu pedido
-    - Tô com fome
+    - Você poderia me ajudar a pedir uma pizza
+    - Pode me ajudar a realizar um pedido
+    - Anote o meu pedido
     - Quero comer uma pizza
-    - Quais sabores você tem
-
+    - Quais sabores você tem?
+    - Quero comprar uma pizza, por favor
 - intent: descricao_item
   examples: |
-    - Quero uma pizza de calabresa 
-    - Uma pizza de frango com catupiry
-    - Meia calabresa e metade mussarela
-    - Gostaria de pedir uma pizza de Bacon
-    - Quero uma pizza de mussarela
-
+    - Quero uma pizza de [calabresa](sabor)
+    - Uma pizza de [frango com catupiry](sabor)
+    - Meia [calabresa](sabor) e meia [atum](sabor)
+    - Quero duas pizzas, uma de [mussarela](sabor) e outra [americana](sabor)
+    - Gostaria de uma pizza de [bacon](sabor) [com borda](borda)
+    - Uma pizza de [marguerita](sabor) e uma de [milho verde](sabor)
+    - Quero uma pizza de [atum](sabor) sem cebola e sem borda
+    - Três pizzas, uma de [3 queijos](sabor), uma [strogonoff](sabor) e uma meia [mussarela](sabor) e meia [portuguesa](sabor)
+    - Preciso de uma pizza de [peperone](sabor)
+    - Me veja uma pizza de [chocolate](sabor)
+    - Quero uma pizza de [mussarela](sabor)
 - intent: status
   examples: |
-    - Qual o status do meu pedido??
-    - Onde está minha pizza??
+    - Qual o status do meu pedido
+    - Onde está a minha pizza?
     - Meu pedido ainda não chegou
-    - Quanto tempo até minha pizza chegar??
-    - Cadê a pizza meu nobre??
-    - Estou com fome
-    - Cadê minha comida??
-
+    - Quero saber porque o meu pedido ainda não chegou?
+    - Ainda não recebi a minha pizza
+    - Cade a minha comida?
+    - Pode me dizer, por favor, onde está a minha pizza?
+    - Onde está a comida?
+    - Quando vai chegar a minha pizza?
+    - Estou com fome, cadê a pizza?
+    - Meu pedido não chegou. Aconteceu algo?
 - intent: id_pedido
   examples: |
-    - O número do meu pedido é o 58693
-    - Meu pedido é o 586
-    - O pedido é o 58697
-    - O número é 5693
-    - Nº 58693
-    - 58693
-    - O pedido é 58693
-    - 58693
-    - Seu pedido é o 58693
-  
-
+    - O número do meu pedido é o [58693](num_pedido)
+    - Meu pedido é o 12369
+    - o número é o 25874
+    - claro, o pedido é o 14569
+    - n: 65478
+    - pedido número: 78569
+    - o pedido é 36985
+    - nº 32569
+    - 14569
+    - Meu pedido está registrado no código 98745
 - intent: agradecimento
   examples: |
     - Obrigado
     - Valeu
-    - TKS
-    - TMJ
-    - Tamo junto
-    - Agradeço
-    - Muito obrigado
+    - Valeu bot, você é demais
+    - Agradeço a ajuda
+    - Desde já agradeço
     - vlw
-    - Você é fera
+    - Muito obrigado pela ajuda
+    - você é fera
+    - tks
     - Agradeço pelo atendimento
-
-- intent: bot_challenge
+- intent: afirmacao
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - sim
+    - yeap
+    - com certeza
+    - claro
+    - ok
+    - sem dúvidas
+    - yes
+    - é isso mesmo
+    - beleza
+    - blz
+- intent: negacao
+  examples: |
+    - Não
+    - não mesmo
+    - Nope
+    - No
+    - Nem
+    - Jamais
+    - Não foi isso que pedi
+    - não é esse o meu pedido
+    - negativo
+    - Não, não é isso que eu quero
+- intent: info_endereco
+  examples: |
+    - Rua Miguel Bozer, nº 101, Socorro-SP
+    - Av. João Firmino, 1308, apto 3, bl 04, São Caetano do Sul-SP
+    - Rua XV de Outubro, 120, Vila Oliveira, Santo André-SP
+    - Rua Ministro Otávio de Mangabeira, número 14, São Bernado do Campo-SP
+    - Rua Principe de Gales, nº 1098, bloco 01, apartamento 21, Santo André
+    - Avenida Kennedy, 107, Vila dos Presidentes São Paulo
+    - Vila Margarida, bairro da flores, n. 02, SCS
+    - Rua Oratorio, Alameda das Tristezas, num 108, Santo André-SP
+    - Rua das Rosas, nº 1, Aliança, Ribeirão Pires-SP
+    - Rua Capitão Rufino Angelo Ramos, nº 149, Jardim Itapark ,Mauá-SP
+- regex: num_pedido
+  examples: |
+    - \d{5}
+- lookup: borda
+  examples: |
+    - com borda
+    - sem borda
+    - c/ borda
+    - s/ borda
