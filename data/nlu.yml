@@ -12,32 +12,32 @@ nlu:
     - opa, tudo bem?
     - salve
     - eae
-- intent: pedido_comida
+- intent: solicita_agendamento
   examples: |
-    - Gostaria de pedir uma pizza
-    - Quero encomendar uma pizza
-    - Você pode anotar o meu pedido
-    - Desejo fazer um pedido
-    - Quero pedir uma pizza
-    - Você poderia me ajudar a pedir uma pizza
-    - Pode me ajudar a realizar um pedido
-    - Anote o meu pedido
-    - Quero comer uma pizza
-    - Quais sabores você tem?
-    - Quero comprar uma pizza, por favor
+    - Gostaria de fazer um agendamento
+    - Quero agendar uma consulta
+    - Você pode anotar a minha consulta?
+    - Desejo fazer uma consulta
+    - Quero fazer um agendamento
+    - Você poderia me ajudar a agendar uma consulta?
+    - Pode me ajudar a realizar um agendamento?
+    - Anote a minha consulta
+    - Quero agendar!
+    - Como faço para agendar uma consulta?
+    - Quero realizar um agendamento, por favor
 - intent: descricao_item
   examples: |
-    - Quero uma pizza de [calabresa](sabor)
-    - Uma pizza de [frango com catupiry](sabor)
-    - Meia [calabresa](sabor) e meia [atum](sabor)
-    - Quero duas pizzas, uma de [mussarela](sabor) e outra [americana](sabor)
-    - Gostaria de uma pizza de [bacon](sabor) [com borda](borda)
-    - Uma pizza de [marguerita](sabor) e uma de [milho verde](sabor)
-    - Quero uma pizza de [atum](sabor) sem cebola e sem borda
-    - Três pizzas, uma de [3 queijos](sabor), uma [strogonoff](sabor) e uma meia [mussarela](sabor) e meia [portuguesa](sabor)
-    - Preciso de uma pizza de [peperone](sabor)
-    - Me veja uma pizza de [chocolate](sabor)
-    - Quero uma pizza de [mussarela](sabor)
+    - Quero agendar com [Pneumologista](especialidade)
+    - Gostaria de passar no [oftalmologista](especialidade)
+    - Desejo passar no [Pneumologista](especialidade)
+    - Desejo ir no [cardiologista](especialidade) e [clínico geral](especialidade)
+    - Gostaria de passar com o [endocrinologista](especialidade)
+    - Gostaria de marcar consulta no [urologista](especialidade) e [ginecologista](especialidade)
+    - Quero uma pizza de [atum](especialidade) sem cebola e sem borda
+    - Três pizzas, uma de [3 queijos](especialidade), uma [strogonoff](especialidade) e uma meia [mussarela](especialidade) e meia [portuguesa](especialidade)
+    - Preciso de uma pizza de [peperone](especialidade)
+    - Me veja uma pizza de [chocolate](especialidade)
+    - Quero uma pizza de [mussarela](especialidade)
 - intent: status
   examples: |
     - Qual o status do meu pedido

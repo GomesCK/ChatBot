@@ -1,69 +1,65 @@
 version: '3.1'
 intents:
 - agradecimento
-- descricao_item
-- id_pedido
-- pedido_comida
+- descricao_agendamento
+- solicita_agendamento
 - saudacao
-- status
+- status_agendamento
 - afirmacao
 - negacao
-- info_endereco
+- info_paciente
 entities:
-- num_pedido
-- sabor
-- borda
+- num_consulta
+- especialidade
+- mes
 slots:
-  pedido_pizza:
+  solicita_agendamento:
     type: text
     influence_conversation: true
     mappings:
     - type: from_entity
-      entity: sabor
-  num_pedido_cliente:
+      entity: especialidade
+  num_consulta_paciente:
     type: text
     influence_conversation: false
     mappings:
     - type: from_entity
-      entity: num_pedido
-  endereco_cliente:
+      entity: num_consulta
+  descricao_agendamento:
     type: text
     influence_conversation: false
     mappings:
     - type: from_text
-      intent: info_endereco
+      intent: info_paciente
 responses:
   utter_saudacao:
   - text: Olá e seja bem vindo! Como posso ajudá-lo?
-  utter_pedido_comida:
-  - text: Certo, o que você gostaria de pedir hoje conosco?
-  utter_descricao_item:
-  - text: Entendido, você deseja comprar uma pizza de {pedido_pizza} correto?
-  utter_status:
-  - text: Você poderia me informar o código do seu pedido?
-  utter_id_pedido:
-  - text: Seu pedido {num_pedido_cliente} está a caminho
+  utter_solicita_agendamento:
+  - text: Certo, deseja agendar consulta em qual especialidade?
+  utter_descricao_agendamento:
+  - text: Entendido, você deseja agendar com a especilidade {especialidade}, correto?
   utter_agradecimento:
   - text: Obrigado pela cooperação e conte sempre conosco
-  utter_sabor_nao_detectado:
-  - text: Não entendi o seu pedido, favor repetir o sabor da pizza.
+  utter_solicita_info:
+  - text: Qual mês gostaria de marcar?
   utter_reformular:
   - text: Me desculpe, você pode reformular a frase?
   utter_default:
   - text: Desculpe não estou entendendo o que vc quer. Favor, reformular suas frases.
-  utter_solicitacao_endereco:
-  - text: Me informe seu endereço completo, por favor.
-  utter_info_endereco:
-  - text: Seu endereço é o {endereco_cliente}?
-  utter_finalizacao_pedido:
+  utter_info_paciente:
+  - text: Por favor, me passe suas informações (Nome, idade, CPF)?
+  utter_finalizacao:
+  - text: Seu pedido foi devidamente registrado no código XYZ. Obrigado pela preferência.
+  utter_status_agendamento:
   - text: Seu pedido foi devidamente registrado no código XYZ. Obrigado pela preferência.
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 actions:
-- utter_pedido_comida
-- utter_status
+- utter_solicita_agendamento
 - utter_saudacao
-- utter_descricao_item
-- utter_id_pedido
-- utter_sabor_nao_detectado
+- utter_descricao_agendamento
+- utter_solicita_info
+- utter_info_paciente
+- utter_finalizacao
+- utter_status_agendamento
